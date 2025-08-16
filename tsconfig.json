@@ -11,7 +11,7 @@
     "target": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "pino"],
+    "types": ["node"],
     // For nodejs:
     "lib": ["esnext"],
     // and npm install -D @types/node
