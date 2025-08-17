@@ -2,9 +2,12 @@ import { app } from './app';
 import { env } from './env';
 
 app
-  .listen({ port: env.PORT })
+  .listen({
+    port: env.PORT,
+    host: '0.0.0.0',
+  })
   .then(() => {
-    console.log(`HTTP Server running on http://localhost:${env.PORT}`);
+    console.log(`HTTP Server running on http://0.0.0.0:${env.PORT}`);
   })
   .catch((err) => {
     console.error('Error starting server:', err);
