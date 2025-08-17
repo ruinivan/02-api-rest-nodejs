@@ -1,4 +1,4 @@
-import { env } from './env/index';
+import { env } from './env';
 import knex, { Knex } from 'knex';
 
 export const config: Knex.Config = {
