@@ -3,6 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": ">=22.16.0"
+  },
   "scripts": {
     "build": "tsup src",
     "dev": "tsx watch src/server.ts",
@@ -20,10 +23,11 @@
     "dotenv": "^17.2.1",
     "fastify": "^5.4.0",
     "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
+    "pg": "^8.16.3",
     "zod": "^4.0.17"
   },
   "devDependencies": {
+    "sqlite3": "^5.1.7",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^24.2.1",
     "@types/supertest": "^6.0.3",
