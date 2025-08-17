@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src",
     "dev": "tsx watch src/server.ts",
-    "start": "node dist/server.js",
+    "start": "node dist/server.cjs",
     "lint": "eslint src --ext .ts --fix",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
     "test": "vitest "
@@ -29,6 +29,7 @@
     "@types/supertest": "^6.0.3",
     "eslint": "^9.33.0",
     "supertest": "^7.1.4",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
