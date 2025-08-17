@@ -1,20 +1,18 @@
 import fastify from 'fastify';
-import { setupKnex } from './database';
+import cookie from '@fastify/cookie';
+import { env } from './env/index';
+import { transactionsRoutes } from './routes/transactions-routes';
 
 const app = fastify();
 
-// GET, POST, PUT, PATCH, DELETE
+app.register(cookie);
 
-// http://localhost:3333/hello
-
-app.get('/hello', async () => {
-  const tables = await setupKnex('sqlite_schema').select('*');
-
-  return tables;
+app.register(transactionsRoutes, {
+  prefix: 'transactions',
 });
 
 app
-  .listen({ port: 3333 })
+  .listen({ port: env.PORT })
   .then(() => {
     console.log('HTTP Server running on http://localhost:3333');
   })
